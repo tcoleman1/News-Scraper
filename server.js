@@ -41,7 +41,7 @@ app.get("/newscrape", function (req, res) {
             link = link + $(element).parents("a").attr("href");
             var summaryOne = $(element).parent().parent().siblings().children("li:first-child").text();
             var summaryTwo = $(element).parent().parent().siblings().children("li:last-child").text();
-
+    
             if (headline && summaryOne && link) {
                 results.push({
                     headline: headline,
